@@ -1,4 +1,4 @@
-package package1
+package package2
 
 // Adds two numbers
 func Add(x, y int) int {
