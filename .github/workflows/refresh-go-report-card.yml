@@ -1,0 +1,15 @@
+name: Refresh go report card
+
+on:
+  push:
+    branches: [master]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  post-request:
+    name: Call refresh go report card action
+    uses: andrew-field/reusable-workflows/.github/workflows/refresh-go-report-card.yml@master
