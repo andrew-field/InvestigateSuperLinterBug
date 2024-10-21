@@ -1,9 +1,12 @@
 ---
-name: Lint
+name: Lint (Module off)
 
 on: # yamllint disable-line rule:truthy
   push: null
   pull_request: null
+
+# Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 permissions: {}
 
@@ -32,3 +35,4 @@ jobs:
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_GO_MODULES: false
+          VALIDATE_JSCPD: false
